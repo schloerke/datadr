@@ -1,0 +1,19 @@
+language: r
+sudo: false
+cache: packages
+
+env:
+  global:
+    - _R_CHECK_FORCE_SUGGESTS_=FALSE
+
+branches:
+  only:
+    - master
+    - dev
+
+notifications:
+  email:
+    recipients:
+    - rhafen@gmail.com
+    on_success: change
+    on_failure: change
